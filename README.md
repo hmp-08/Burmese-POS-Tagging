@@ -1,5 +1,5 @@
 # Burmese-POS-Tagging-Model
-Burmese Part-of-Speech (POS) model Based on Transformers.
+Burmese Part-of-Speech (POS) model Based on Transformers (Opennmt-tf framework)
 
 # Introduction
 Part-of-Speech (POS) refers to categorizing words in a sentence based on their grammatical roles. It helps in parsing, information retrieval, named entity recognition, sentiment analysis, machine translation, and language generation. POS tagging uses machine learning to assign tags to words. It improves language analysis and understanding in NLP tasks.
@@ -27,7 +27,7 @@ There are 15 POS tags. The definitions and descriptions of POS tags are presente
 15. v as Verb (E.g. လှုပ်ရှား )
 
 # Data Preprocessing
-I Splitted the corpus into training, validation, and testing sets. The training set contains the majority of the data (90%), while the validation and testing sets includes 5% each maintaing a balanced representation of POS tags across sets.
+I splitted the corpus into training, validation, and testing sets. The training set contains the majority of the data (90%), while the validation and testing sets includes 5% each maintaing a balanced representation of POS tags across sets.
 I also generated a vocabulary file that includes all unique words from the training set. I utilized preprocessing and formatting scripts provided by OpenNMT and formatting the data into the desired input format for OpenNMT.
 
 # Data Integration with OpenNMT
