@@ -37,12 +37,11 @@ OpenNMT-TF is a powerful framework for training neural machine translation model
 # Inference with pre-built model
 You can download my pre-built model here : https://drive.google.com/file/d/1aGGffFb0KbZPoRP8S2mscQAFrF0tu8aG/view?usp=sharing
 
-# With GPU 
+### With GPU 
 ```
 onmt-main --config data.yml --auto_config infer --features_file src-test.txt
 ```
-
-# Without GPU 
+### Without GPU 
 ```
 CUDA_VISIBLE_DEVICES="" onmt-main --config data.yml --auto_config infer --features_file src-test.txt
 ```
