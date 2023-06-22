@@ -34,8 +34,26 @@ I also generated a vocabulary file that includes all unique words from the train
 I integrated the formatted and preprocessed data into the OpenNMT training pipeline, configured the training settings, model architecture, hyperparameters, and data loading according to the OpenNMT documentation.
 OpenNMT-TF is a powerful framework for training neural machine translation models, and it can also be used for other sequence-to-sequence tasks like part-of-speech (POS) tagging. 
 
-# Inference with pre-built model
-You can download my pre-built model here : https://drive.google.com/file/d/1aGGffFb0KbZPoRP8S2mscQAFrF0tu8aG/view?usp=sharing
+# Install opennmt
+```
+pip install OpenNMT-tf[tensorflow]
+```
+
+# How to train
+
+## 1. Build Vocab
+   
+```
+onmt-build-vocab --from_vocab sp-src.vocab --from_format sentencepiece --save_vocab sp_src_vocab.txt
+onmt-build-vocab --from_vocab sp-tgt.vocab --from_format sentencepiece --save_vocab sp_tgt_vocab.txt
+```
+
+## 2. Train
+```
+onmt-main --model_type Transformer --config data.yml --auto_config train --with_eval
+```
+
+## 3. Inference
 
 ### With GPU 
 ```
