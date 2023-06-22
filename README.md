@@ -47,7 +47,6 @@ onmt-main --config data.yml --auto_config infer --features_file src-test.txt
 CUDA_VISIBLE_DEVICES="" onmt-main --config data.yml --auto_config infer --features_file src-test.txt
 ```
 
-
 Opennmt-tf ---> https://opennmt.net/OpenNMT-tf/
 
 Dataset ---> https://github.com/ye-kyaw-thu/myPOS/blob/master/corpus-ver-3.0/corpus/mypos-ver.3.0.txt
