@@ -64,7 +64,7 @@ onmt-main --config data.yml --auto_config infer --features_file src-test.txt
 CUDA_VISIBLE_DEVICES="" onmt-main --config data.yml --auto_config infer --features_file src-test.txt
 ```
 
-You can download my pretrained model here https://drive.google.com/file/d/1svnMyfjrFHTiNlux2ChTe_-6x40lpWWn/view?usp=drive_link. 
+You can download my [Pretrained-model](https://drive.google.com/file/d/1svnMyfjrFHTiNlux2ChTe_-6x40lpWWn/view?usp=sharing) here.
 
 Opennmt-tf ---> https://opennmt.net/OpenNMT-tf/
 
