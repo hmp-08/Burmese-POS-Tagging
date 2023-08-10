@@ -64,7 +64,29 @@ onmt-main --config data.yml --auto_config infer --features_file src-test.txt
 CUDA_VISIBLE_DEVICES="" onmt-main --config data.yml --auto_config infer --features_file src-test.txt
 ```
 
-### Using Ctranslate2
+## Inference Using Ctranslate2
+
+I have exported the trained Burmese Part-of-Speech (POS) model in the ctranslate2 format for easy and efficient inference. This allows you to utilize the model for POS tagging without the need for the entire training infrastructure.
+
+### Prerequisites
+Before using the exported model, ensure you have the ctranslate2 library installed. You can install it using the following command:
+
+```
+pip install ctranslate2
+```
+
+### Model Export Settings
+The exported model was created with the following settings from the data.yml configuration file:
+
+Batch Size: The number of sentences or sequences processed in each batch during export.
+
+Scorers: The evaluation metric used to determine the best model for export.
+
+Export on Best: The model was exported when the specified evaluation metric (BLEU score) improved.
+
+Export Format: The model was exported in the ctranslate2 format for efficient inference.
+
+
 ```
 import ctranslate2
 import sentencepiece as spm
