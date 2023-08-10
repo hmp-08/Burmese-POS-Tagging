@@ -64,6 +64,28 @@ onmt-main --config data.yml --auto_config infer --features_file src-test.txt
 CUDA_VISIBLE_DEVICES="" onmt-main --config data.yml --auto_config infer --features_file src-test.txt
 ```
 
+### Using Ctranslate2
+```
+import ctranslate2
+import sentencepiece as spm
+
+model_path = "/home/user/Documents/My_test/POS/dataset/run/6400/"
+
+translator = ctranslate2.Translator(model_path, device="cpu")  # "cpu" or "cuda"
+encode_sp = spm.SentencePieceProcessor('sp-src.model')
+decode_sp = spm.SentencePieceProcessor('sp-tgt.model')
+
+source_sent = "ဗိုလ်ချုပ် အောင်ဆန်း ၏ ဖက်ဆစ် ဆန့်ကျင် ရေး အဖွဲ့ တည်ထောင် ရန် အဆို ကို ဆွေးနွေး ကြ ပြီး အဖွဲ့ ၏ ကြေညာစာတမ်း နှင့် စုပေါင်း ဆောင်ရွက် ရ မည့် စီမံကိန်း တစ် ရပ် ကို သဘောတူ အတည်ပြု လိုက် ပါ သည် ။"
+source_tokens = encode_sp.encode(source_sent, out_type=str)
+
+results = translator.translate_batch([source_tokens])
+target_tokens = results[0].hypotheses[0]
+target_text = decode_sp.decode(target_tokens)
+target_text
+
+# output --> 'n n ppm n v part n v conj n ppm v part conj n ppm n ppm v v part part n tn part ppm v v part part ppm punc'
+```
+
 You can download my [Pretrained-model](https://drive.google.com/file/d/1svnMyfjrFHTiNlux2ChTe_-6x40lpWWn/view?usp=sharing) here.
 
 Opennmt-tf ---> https://opennmt.net/OpenNMT-tf/
