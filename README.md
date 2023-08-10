@@ -91,7 +91,7 @@ Export Format: The model was exported in the ctranslate2 format for efficient in
 import ctranslate2
 import sentencepiece as spm
 
-model_path = "/home/user/Documents/My_test/POS/dataset/run/6400/"
+model_path = "/home/user/Documents/My_test/POS/dataset/run/export/6400/"
 
 translator = ctranslate2.Translator(model_path, device="cpu")  # "cpu" or "cuda"
 encode_sp = spm.SentencePieceProcessor('sp-src.model')
