@@ -107,6 +107,9 @@ target_text
 
 # output --> 'n n ppm n v part n v conj n ppm v part conj n ppm n ppm v v part part n tn part ppm v v part part ppm punc'
 ```
+## 4. Evaluation using WER
+
+I have provided a Jupyter Notebook, wer_calc.ipynb, that demonstrates the evaluation of the performance of the trained Burmese Part-of-Speech (POS) model using Word Error Rate (WER) calculation.
 
 You can download my [Pretrained-model](https://drive.google.com/file/d/1svnMyfjrFHTiNlux2ChTe_-6x40lpWWn/view?usp=sharing) here.
 
