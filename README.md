@@ -57,11 +57,11 @@ onmt-main --model_type Transformer --config data.yml --auto_config train --with_
 
 ### With GPU 
 ```
-onmt-main --config data.yml --auto_config infer --features_file src-test.txt
+onmt-main --config data.yml --auto_config infer --features_file src-test.txt > pred-test.txt
 ```
 ### Without GPU 
 ```
-CUDA_VISIBLE_DEVICES="" onmt-main --config data.yml --auto_config infer --features_file src-test.txt
+CUDA_VISIBLE_DEVICES="" onmt-main --config data.yml --auto_config infer --features_file src-test.txt > pred-test.txt
 ```
 
 ## Inference Using Ctranslate2
