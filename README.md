@@ -111,8 +111,6 @@ target_text
 
 I have provided a Jupyter Notebook, wer_calc.ipynb, that demonstrates the evaluation of the performance of the trained Burmese Part-of-Speech (POS) model using Word Error Rate (WER) calculation.
 
-You can download my [Pretrained-model](https://drive.google.com/file/d/1svnMyfjrFHTiNlux2ChTe_-6x40lpWWn/view?usp=sharing) here.
-
 Opennmt-tf ---> https://opennmt.net/OpenNMT-tf/
 
 Dataset ---> https://github.com/ye-kyaw-thu/myPOS/blob/master/corpus-ver-3.0/corpus/mypos-ver.3.0.txt
