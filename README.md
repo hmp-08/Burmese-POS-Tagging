@@ -107,6 +107,8 @@ target_text
 
 # output --> 'n n ppm n v part n v conj n ppm v part conj n ppm n ppm v v part part n tn part ppm v v part part ppm punc'
 ```
+![](https://github.com/hmp-08/Burmese-POS-Tagging/blob/main/Screenshot%20from%202023-12-20%2011-42-32.png)
+
 ## 4. Evaluation using WER
 
 I have provided a Jupyter Notebook, wer_calc.ipynb, that demonstrates the evaluation of the performance of the trained Burmese Part-of-Speech (POS) model using Word Error Rate (WER) calculation.
